@@ -300,3 +300,19 @@ const data = [
     "completed": true
   }
 ]
+
+// {
+//   "userId": 1,
+//   "id": 1,
+//   "title": "delectus aut autem",
+//   "completed": false
+// },
+
+// create a list of user 3's to-dos
+const userThreeData = data.filter(task => task.userId === 3);
+console.log(userThreeData);
+
+// find the number of user 3's incomplete tasks
+let userThreeUncompleted = userThreeData.filter(task => task.completed === false);
+console.log(`User 3 has ${userThreeUncompleted.length} uncompleted tasks.`);
+

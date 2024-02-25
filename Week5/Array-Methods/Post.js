@@ -300,3 +300,39 @@ const data = [
     "body": "error suscipit maxime adipisci consequuntur recusandae\nvoluptas eligendi et est et voluptates\nquia distinctio ab amet quaerat molestiae et vitae\nadipisci impedit sequi nesciunt quis consectetur"
   }
 ]
+
+// {
+//   "userId": 1,
+//   "id": 1,
+//   "title": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+//   "body": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto"
+// },
+
+// create a list of user 5's posts
+const userFiveData = data.filter(posts => posts.userId === 5);
+console.log(userFiveData);
+
+// directions were unclear as to the weather you wanted title
+// and body pairs from the entire data set or just from user 5
+// so I did both
+
+// create a list of title and body pairs from user 5 data
+const userFivePosts = userFiveData.map((posts) => {
+  const tempData = {};
+  tempData.title = posts.title;
+  tempData.body = posts.body;
+  return tempData;
+});
+console.log(userFivePosts);
+
+
+// create a list of of title and body pairs from the entire data set
+const userTitleBodyPair = data.map((posts) => {
+  const tempData = {};
+  tempData.title = posts.title;
+  tempData.body = posts.body;
+  return tempData;
+});
+console.log(userTitleBodyPair);
+
+
